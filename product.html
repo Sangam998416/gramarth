@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rural Handmade Products</title>
+    <link rel="stylesheet" href="product.css">
+    <link rel="script" href="product.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <!-- Left: Logo and website name -->
+        <div class="logo-container">
+            <img src="product_logo0.png" alt="Logo">
+            <span class="website-name">Rural Handmade Products</span>
+        </div>
+
+        <!-- Center: Search bars -->
+        <div class="search-container">
+            <input type="text" id="productSearch" placeholder="Enter product to search">
+            <button onclick="searchProduct()">Search</button>
+            <div class="filter-container">
+                <select id="stateFilter" onchange="filterByState()">
+                    <option value="Select State">Select State</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujrat">Gujrat</option>
+                    <option value="Hariyana">Hariyana</option>
+                    <option value="Jammu & Kashmir">Jammu & Kashmir</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Kerla">Kerla</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                    <option value="Mahrastra">Mahrastra</option>
+                    <option value="Odisa">Odisa</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajsthan">Rajsthan</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Right: Navigation bar with Font Awesome icons -->
+        <nav>
+            <a href="/3 frontend/html/home.html"><i class="fas fa-home"></i> Home</a>
+            <a href="/3 frontend/html/products.html"><i class="fas fa-box-open"></i> Products</a>
+            <a href="/3 frontend/html/about.html"><i class="fas fa-info-circle"></i> About Us</a>
+            <a href="/3 frontend/html/sell.html"><i class="fas fa-store"></i> Sell</a>
+            <a href="/3 frontend/html/contact.html"><i class="fas fa-question-circle"></i> Help</a>
+            <a href="/3 frontend/html/message.html"><i class="fas fa-comments"></i> Message</a>
+            <a href="/3 frontend/html/signIn.html"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+        </nav>
+        
+        
+    </header>
+    
+    <!-- Main content -->
+    <section id="home">
+        <h2>Fresh Products from Rural Communities</h2>
+        <p>Explore the finest handmade products from rural artisans across the country.</p>
+        <p>We bring you the best organic and handmade products directly from rural areas. Support local farmers and artisans!</p>
+    </section>
+    
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="product-list"></div> <!-- Container for products -->
+    </section>
+    
+    <section id="sell">
+        <h2>Sell Your Products</h2>
+        <p>If you are a rural artisan or farmer, we invite you to sell your handmade products on our platform. Join us in promoting your craftsmanship and reach a wider audience!</p>
+        <p>For more details on how to get started, please <a href="#contact">contact us</a>.</p>
+    </section>
+    
+    <section id="help">
+        <h2>Help and Support</h2>
+        <p>Need assistance? Our support team is here to help you with any questions you may have regarding our services, products, or issues.</p>
+        <p>Feel free to reach out through our <a href="#contact">contact form</a> or browse our FAQ section for quick answers.</p>
+    </section>
+    <section id="message">
+        <h2>Leave a Message</h2>
+        <p>We value your feedback! If you have any comments or suggestions, please fill out the form below:</p>
+        <form id="messageForm" onsubmit="return validateMessageForm()">
+            <label for="messageName">Name:</label>
+            <input type="text" id="messageName" name="messageName" required>
+    
+            <label for="messageContent">Message:</label>
+            <textarea id="messageContent" name="messageContent" required></textarea>
+    
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    
+    
+    <section id="signIn">
+        <h2>Sign In</h2>
+        <form id="signInForm">
+            <label for="signInEmail">Email:</label>
+            <input type="email" id="signInEmail" name="signInEmail" required>
+    
+            <label for="signInPassword">Password:</label>
+            <input type="password" id="signInPassword" name="signInPassword" required>
+    
+            <button type="submit">Sign In</button>
+        </form>
+    </section>
+    
+   
+    <section id="about">
+        <h2>About Us</h2>
+        <p>At <strong>Rural Handmade Products</strong>, the seeds of our journey were planted in a small village where tradition and craftsmanship were deeply rooted in the community. Our founder, <strong>Vivek Sharma</strong>, grew up surrounded by skilled artisans and farmers, witnessing the beauty and skill that goes into creating handcrafted goods and organic produce. He realized that these talented individuals deserved a broader audience — one that could truly appreciate their hard work and dedication.</p>
+        
+        <p>In 2024, Vivek decided to take a leap of faith. Together with <strong>Anjali Patel</strong>, a passionate marketer with a vision for rural empowerment, and <strong>Rohit Gupta</strong>, a talented product designer, they began a mission to bridge the gap between rural artisans and global markets. They believed in giving these creators the platform they deserved, not only to showcase their work but to preserve their traditional skills and cultural heritage.</p>
+        
+        <p>Vivek and his team started traveling from village to village, meeting with artisans and farmers, understanding their challenges, and gathering their stories. They were amazed at the wide variety of beautiful products — from handwoven textiles and pottery to organic spices and handmade crafts — each representing the unique spirit of its region.</p>
+        
+        <p>With that vision in mind, <strong>Rural Handmade Products</strong> was born — an online marketplace that connects rural communities with people who value authenticity, quality, and sustainability. Every product sold through our platform directly benefits the artisans and farmers who create it, ensuring fair trade and sustainable growth for their communities.</p>
+        
+        <h3>Our Mission</h3>
+        <p>Our mission is simple: to uplift rural communities by providing them with sustainable opportunities and global access. We aim to empower artisans and farmers to thrive while offering consumers a chance to experience the rich traditions and high-quality products from rural India.</p>
+        
+        <h3>Our Values</h3>
+        <ul>
+            <li><strong>Empowerment:</strong> We believe in the power of creating opportunities that uplift rural communities.</li>
+            <li><strong>Sustainability:</strong> Every product is made with care for the environment and for the livelihoods of the creators.</li>
+            <li><strong>Fair Trade:</strong> We ensure that all artisans and farmers are paid fairly for their work, providing them with a dignified living.</li>
+        </ul>
+    </section>
+    
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, feel free to reach out to us. We're here to help and would love to hear from you!</p>
+        <div class="contact-info">
+            <div class="contact-details">
+                <i class="fas fa-map-marker-alt"></i>
+                <p><strong>Address:</strong>pacific business park office no:218, Timdi Patiya Morbi, India</p>
+            </div>
+            <div class="contact-details">
+                <i class="fas fa-phone-alt"></i>
+                <p><strong>Phone:</strong> +91 89571 65770</p>
+            </div>
+            <div class="contact-details">
+                <i class="fas fa-envelope"></i>
+                <p><strong>Email:</strong> info@ruralhandmadeproducts.com</p>
+            </div>
+        </div>
+        
+        <form id="contactForm" class="styled-form" onsubmit="return validateContactForm()">
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+        
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+        
+            <div class="input-group">
+                <i class="fas fa-comment-alt"></i>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            </div>
+        
+            <button type="submit" class="contact-button">Send Message <i class="fas fa-paper-plane"></i></button>
+        </form>
+        
+    </section>
+    
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Rural Handmade Products. All rights reserved.</p>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact Us</a>
+        </nav>
+    </footer>
+    
+
+    <script src="product.js"></script>
+</body>
+</html>
